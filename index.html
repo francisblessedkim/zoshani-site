@@ -405,9 +405,9 @@ footer{background:var(--earth);border-top:1px solid rgba(232,147,26,0.15);paddin
       </div>
       <a href="#" class="btn-outline" data-page="projects">Full Portfolio →</a>
       <!-- MEMBER-ONLY INITIATIVES -->
-      <div style="margin-top: 1.5rem;"><a href="initiatives.html" style="font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,224,200,0.25); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(240,224,200,0.25)'">✦ Member Initiatives →</a></div>
+      <div style="margin-top: 1.5rem;"><a href="#" data-page="initiatives" style="font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,224,200,0.25); text-decoration: none; transition: color 0.3s; cursor: pointer;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(240,224,200,0.25)'">✦ Member Initiatives →</a></div>
       <!-- MEMBER-ONLY INITIATIVES -->
-      <div style="margin-top: 1.5rem;"><a href="initiatives.html" style="font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,224,200,0.25); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(240,224,200,0.25)'">✦ Member Initiatives →</a></div>
+      <div style="margin-top: 1.5rem;"><a href="#" data-page="initiatives" style="font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(240,224,200,0.25); text-decoration: none; transition: color 0.3s; cursor: pointer;" onmouseover="this.style.color='var(--sand)'" onmouseout="this.style.color='rgba(240,224,200,0.25)'">✦ Member Initiatives →</a></div>
     </div>
     <div class="hp-grid">
       <div class="hp-card" data-page="projects"><img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="ASRII"><div class="hp-card-over"></div><div class="hp-card-info"><div class="hp-card-tag">Agribusiness · Uganda</div><div class="hp-card-name">ASRII</div><div class="hp-card-status">Active Development</div></div></div>
@@ -1067,9 +1067,361 @@ document.addEventListener('submit', function(e) {
   setTimeout(function() {
     btn.textContent = 'Send Message →';
     btn.style.background = '';
+
+<!-- INITIATIVES PAGE (HIDDEN) -->
+<div class="page" id="initiatives">
+  
+
+  
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero-left reveal">
+      <div class="hero-eyebrow">Current Work · 2026</div>
+      <h1 class="hero-title">
+        Initiatives<br>
+        <em>Transformative</em><br>
+        Projects
+      </h1>
+      <p class="hero-subtitle">
+        Programs where we combine market intelligence, commercial structuring, and capital solutions to unlock durable industrial capacity and local value across Africa.
+      </p>
+    </div>
+    <div class="hero-right">
+      <img src="assets/Photos/Solar1.jpg" alt="Solar energy Africa" />
+      <div class="hero-overlay"></div>
+    </div>
+  </section>
+
+  <!-- INITIATIVE CARDS -->
+
+  <section class="initiatives">
+    <div class="initiatives-header">
+      <div class="reveal">
+        <div class="section-label">Featured Initiatives</div>
+        <h2>Select projects we are actively developing</h2>
+      </div>
+      <p class="reveal reveal-delay-1">
+        Each initiative is structured as a replicable template for industrialization — combining off-take commitments, equipment sourcing, local training, and blended finance.
+      </p>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card reveal">
+        <img src="assets/Photos/Gems.png" alt="Mineral beneficiation" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Structuring</span>
+            <span class="card-region">West Africa</span>
+          </div>
+          <h3>Mineral Beneficiation<br>Cluster</h3>
+          <p class="card-desc">Creating a downstream processing cluster to capture value locally and export higher-margin products — gemstone, gold, and diamond artisan industrialization.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card reveal reveal-delay-1">
+        <img src="assets/Photos/Factory Floor.png" alt="Artisan industrialization" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Partnership Assembly</span>
+            <span class="card-region">Multi-country</span>
+          </div>
+          <h3>Artisan Industrialization<br>Program</h3>
+          <p class="card-desc">Converting artisanal manufacturing into certified export supply chains with training and technology transfer.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card reveal reveal-delay-2">
+        <img src="assets/Photos/Port.png" alt="Logistics and port cluster" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Advisory</span>
+            <span class="card-region">Coastal West Africa</span>
+          </div>
+          <h3>Logistics &amp; Port<br>Cluster</h3>
+          <p class="card-desc">Integrated logistics improvements tied to industrial hubs to lower supply chain costs and improve throughput.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 — Full Width -->
+      <div class="card reveal reveal-delay-3">
+        <img src="assets/Photos/Solar1.jpg" alt="Utility-scale solar" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Finance Structuring</span>
+            <span class="card-region">Pan-Africa</span>
+          </div>
+          <h3>Utility-Scale Solar<br>&amp; Microgrid</h3>
+          <p class="card-desc">Blended finance solutions for grid-scale and behind-the-meter solar to de-risk energy for industrial tenants.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- DEEP DIVES -->
+
+  <section class="deep-dives">
+    <div class="deep-dives-inner">
+      <div class="section-label reveal">Deep Dives</div>
+      <h2 class="reveal">Approach, partners,<br>and impact targets.</h2>
+
+      <div class="dives-grid">
+        <div class="dive reveal">
+          <div class="dive-num">01</div>
+          <h4>Beneficiation: Approach</h4>
+          <p>Partner sequencing → off-take commitments → equipment sourcing with local training embedded at every stage of the value chain.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">60%</span>
+            <span class="dive-stat-label">local value capture<br>target within 5 years</span>
+          </div>
+        </div>
+
+        <div class="dive reveal reveal-delay-1">
+          <div class="dive-num">02</div>
+          <h4>Energy: Impact</h4>
+          <p>Hybrid EPC+PE structuring with long-term O&amp;M contracts with local operators, reducing energy cost and creating lasting technical capacity.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">30%</span>
+            <span class="dive-stat-label">reduction in industrial<br>energy costs</span>
+          </div>
+        </div>
+
+        <div class="dive reveal reveal-delay-2">
+          <div class="dive-num">03</div>
+          <h4>Logistics: Model</h4>
+          <p>Corridor-level planning linking port upgrades, cold chain, and last-mile distribution to serve industrial zones and export nodes simultaneously.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">4</span>
+            <span class="dive-stat-label">active regions across<br>West &amp; East Africa</span>
+          </div>
+        </div>
+
+        <div class="dive reveal reveal-delay-3">
+          <div class="dive-num">04</div>
+          <h4>Capital: Structure</h4>
+          <p>EXIM Bank, DFC, and USTDA financing instruments blended with commercial capital to achieve bankable project finance stacks at scale.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">3×</span>
+            <span class="dive-stat-label">leverage ratio target<br>on public capital</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta-strip">
+    <h2>Building Tomorrow's <em>Industrial Ecosystems</em> Today</h2>
+    <a href="contact.html" class="btn-ghost">
+      Discuss an Initiative
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  
+
+  
+
+
+</div>
     btn.style.color = '';
   }, 3500);
 });
 </script>
+
+<!-- INITIATIVES PAGE (HIDDEN) -->
+<div class="page" id="initiatives">
+  
+
+  
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero-left reveal">
+      <div class="hero-eyebrow">Current Work · 2026</div>
+      <h1 class="hero-title">
+        Initiatives<br>
+        <em>Transformative</em><br>
+        Projects
+      </h1>
+      <p class="hero-subtitle">
+        Programs where we combine market intelligence, commercial structuring, and capital solutions to unlock durable industrial capacity and local value across Africa.
+      </p>
+    </div>
+    <div class="hero-right">
+      <img src="assets/Photos/Solar1.jpg" alt="Solar energy Africa" />
+      <div class="hero-overlay"></div>
+    </div>
+  </section>
+
+  <!-- INITIATIVE CARDS -->
+
+  <section class="initiatives">
+    <div class="initiatives-header">
+      <div class="reveal">
+        <div class="section-label">Featured Initiatives</div>
+        <h2>Select projects we are actively developing</h2>
+      </div>
+      <p class="reveal reveal-delay-1">
+        Each initiative is structured as a replicable template for industrialization — combining off-take commitments, equipment sourcing, local training, and blended finance.
+      </p>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card reveal">
+        <img src="assets/Photos/Gems.png" alt="Mineral beneficiation" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Structuring</span>
+            <span class="card-region">West Africa</span>
+          </div>
+          <h3>Mineral Beneficiation<br>Cluster</h3>
+          <p class="card-desc">Creating a downstream processing cluster to capture value locally and export higher-margin products — gemstone, gold, and diamond artisan industrialization.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card reveal reveal-delay-1">
+        <img src="assets/Photos/Factory Floor.png" alt="Artisan industrialization" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Partnership Assembly</span>
+            <span class="card-region">Multi-country</span>
+          </div>
+          <h3>Artisan Industrialization<br>Program</h3>
+          <p class="card-desc">Converting artisanal manufacturing into certified export supply chains with training and technology transfer.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card reveal reveal-delay-2">
+        <img src="assets/Photos/Port.png" alt="Logistics and port cluster" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Advisory</span>
+            <span class="card-region">Coastal West Africa</span>
+          </div>
+          <h3>Logistics &amp; Port<br>Cluster</h3>
+          <p class="card-desc">Integrated logistics improvements tied to industrial hubs to lower supply chain costs and improve throughput.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 — Full Width -->
+      <div class="card reveal reveal-delay-3">
+        <img src="assets/Photos/Solar1.jpg" alt="Utility-scale solar" />
+        <div class="card-arrow">
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7v10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="card-phase">Finance Structuring</span>
+            <span class="card-region">Pan-Africa</span>
+          </div>
+          <h3>Utility-Scale Solar<br>&amp; Microgrid</h3>
+          <p class="card-desc">Blended finance solutions for grid-scale and behind-the-meter solar to de-risk energy for industrial tenants.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- DEEP DIVES -->
+
+  <section class="deep-dives">
+    <div class="deep-dives-inner">
+      <div class="section-label reveal">Deep Dives</div>
+      <h2 class="reveal">Approach, partners,<br>and impact targets.</h2>
+
+      <div class="dives-grid">
+        <div class="dive reveal">
+          <div class="dive-num">01</div>
+          <h4>Beneficiation: Approach</h4>
+          <p>Partner sequencing → off-take commitments → equipment sourcing with local training embedded at every stage of the value chain.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">60%</span>
+            <span class="dive-stat-label">local value capture<br>target within 5 years</span>
+          </div>
+        </div>
+
+        <div class="dive reveal reveal-delay-1">
+          <div class="dive-num">02</div>
+          <h4>Energy: Impact</h4>
+          <p>Hybrid EPC+PE structuring with long-term O&amp;M contracts with local operators, reducing energy cost and creating lasting technical capacity.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">30%</span>
+            <span class="dive-stat-label">reduction in industrial<br>energy costs</span>
+          </div>
+        </div>
+
+        <div class="dive reveal reveal-delay-2">
+          <div class="dive-num">03</div>
+          <h4>Logistics: Model</h4>
+          <p>Corridor-level planning linking port upgrades, cold chain, and last-mile distribution to serve industrial zones and export nodes simultaneously.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">4</span>
+            <span class="dive-stat-label">active regions across<br>West &amp; East Africa</span>
+          </div>
+        </div>
+
+        <div class="dive reveal reveal-delay-3">
+          <div class="dive-num">04</div>
+          <h4>Capital: Structure</h4>
+          <p>EXIM Bank, DFC, and USTDA financing instruments blended with commercial capital to achieve bankable project finance stacks at scale.</p>
+          <div class="dive-stat">
+            <span class="dive-stat-num">3×</span>
+            <span class="dive-stat-label">leverage ratio target<br>on public capital</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta-strip">
+    <h2>Building Tomorrow's <em>Industrial Ecosystems</em> Today</h2>
+    <a href="contact.html" class="btn-ghost">
+      Discuss an Initiative
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  
+
+  
+
+
+</div>
 </body>
 </html>
