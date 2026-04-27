@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Initiatives — Zoshani LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --earth: #100800;
+      --earth2: #1a0f00;
+      --terra: #c85a2a;
+      --amber: #e8931a;
+      --teal: #1b5e52;
+      --sand: #f0e0c8;
+      --sand2: #d4c0a0;
+      --sand3: #b09878;
+      --white: #fdfaf5;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      background: var(--earth2);
+      color: var(--sand);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+    
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: stretch;
+      height: 60px;
+      background: rgba(16, 8, 0, 0.96);
+      border-bottom: 1px solid rgba(232, 147, 26, 0.15);
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      text-decoration: none;
+      gap: 10px;
+    }
+    
+    .nav-logo-text {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      color: var(--amber);
+    }
+    
+    .nav-links {
+      display: flex;
+      flex: 1;
+      align-items: stretch;
+    }
+    
+    .nav-links a {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sand2);
+      text-decoration: none;
+      padding: 0 22px;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid rgba(232, 147, 26, 0.08);
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--amber);
+      background: rgba(245, 200, 66, 0.04);
+    }
+    
+    .nav-end {
+      display: flex;
+      align-items: stretch;
+      margin-left: auto;
+    }
+    
+    .nav-cta {
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--earth);
+      background: var(--terra);
+      padding: 0 28px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .nav-cta:hover {
+      background: var(--amber);
+      color: var(--earth);
+    }
+    
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 52% 48%;
+      padding-top: 60px;
+    }
+    
+    .hero-bg { position: absolute; inset: 0; }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.2) saturate(0.4); }
+    
+    .hero-diag {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 48%;
+      background: var(--teal);
+      clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 1;
+    }
+    
+    .hero-diag-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 48%;
+      overflow: hidden;
+      clip-path: polygon(16% 0, 100% 0, 100% 100%, 0% 100%);
+      z-index: 2;
+    }
+    
+    .hero-diag-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5) saturate(0.6);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px;
+    }
+    
+    .hero-eyebrow {
+      font-size: 0.6rem;
+      font-weight: 400;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 28px;
+    }
+    
+    .hero-h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      margin-bottom: 0;
+    }
+    
+    .hero-h1 .accent {
+      color: var(--amber);
+    }
+    
+    .hero-desc {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--sand2);
+      max-width: 460px;
+      margin: 32px 0 44px;
+    }
+    
+    /* CONTENT SECTION */
+    .init-section {
+      padding: 100px 64px;
+      background: var(--white);
+      color: var(--earth);
+    }
+    
+    .init-header {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+    
+    .section-label {
+      font-size: 0.58rem;
+      font-weight: 400;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+    }
+    
+    .section-h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      color: var(--earth);
+      margin-bottom: 20px;
+    }
+    
+    .init-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+    
+    .init-card {
+      background: #f0e0c8;
+      padding: 30px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 4px;
+    }
+    
+    .init-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+    
+    .init-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border-radius: 2px;
+    }
+    
+    .init-card-phase {
+      display: inline-block;
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--terra);
+      border: 1px solid rgba(200, 90, 42, 0.3);
+      padding: 6px 12px;
+      margin-bottom: 12px;
+      border-radius: 2px;
+    }
+    
+    .init-card-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: var(--earth);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    
+    .init-card-desc {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--sand3);
+    }
+    
+    /* FOOTER */
+    footer {
+      background: var(--earth2);
+      padding: 40px 64px;
+      border-top: 1px solid rgba(232, 147, 26, 0.1);
+      text-align: center;
+      color: rgba(240, 224, 200, 0.4);
+      font-size: 0.7rem;
+    }
+    
+    .footer-logo {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      color: var(--amber);
+      margin-bottom: 12px;
+      letter-spacing: 0.1em;
+    }
+    
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-content { padding: 60px 32px; }
+      .hero-diag { display: none; }
+      .hero-diag-img { display: none; }
+      .init-grid { grid-template-columns: 1fr; }
+      nav, .init-section { padding-left: 32px; padding-right: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-text">Zoshani</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="index.html">Services</a></li>
+      <li><a href="initiatives.html" class="active">Initiatives</a></li>
+      <li><a href="index.html">Contact</a></li>
+    </ul>
+    <div class="nav-end">
+      <a href="index.html" class="nav-cta">Back to Main</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/Photos/Solar1.jpg" alt="Background" />
+    </div>
+    <div class="hero-diag"></div>
+    <div class="hero-diag-img">
+      <img src="assets/Photos/Solar.png" alt="Solar" />
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Member Exclusive · 2026</div>
+      <h1 class="hero-h1">Member <span class="accent">Initiatives</span></h1>
+      <p class="hero-desc">Transformative projects combining market intelligence, commercial structuring, and capital solutions to unlock durable industrial capacity across Africa.</p>
+    </div>
+  </section>
+
+  <!-- INITIATIVES GRID -->
+  <section class="init-section">
+    <div class="init-header">
+      <div class="section-label">Our Active Work</div>
+      <h2 class="section-h2">Initiatives & Projects</h2>
+    </div>
+    
+    <div class="init-grid">
+      <!-- Card 1 -->
+      <div class="init-card">
+        <img src="assets/Photos/Gems.png" alt="Mineral beneficiation" />
+        <div class="init-card-phase">Structuring</div>
+        <h3 class="init-card-title">Mineral Beneficiation Cluster</h3>
+        <p class="init-card-desc">Creating a downstream processing cluster to capture value locally and export higher-margin products — gemstone, gold, and diamond artisan industrialization.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="init-card">
+        <img src="assets/Photos/Factory Floor.png" alt="Artisan industrialization" />
+        <div class="init-card-phase">Partnership</div>
+        <h3 class="init-card-title">Artisan Industrialization Program</h3>
+        <p class="init-card-desc">Converting artisanal manufacturing into certified export supply chains with training and technology transfer.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="init-card">
+        <img src="assets/Photos/Port.png" alt="Logistics" />
+        <div class="init-card-phase">Advisory</div>
+        <h3 class="init-card-title">Logistics & Port Cluster</h3>
+        <p class="init-card-desc">Integrated logistics improvements tied to industrial hubs to lower supply chain costs and improve throughput.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="init-card">
+        <img src="assets/Photos/Solar.png" alt="Solar energy" />
+        <div class="init-card-phase">Finance</div>
+        <h3 class="init-card-title">Utility-Scale Solar & Microgrid</h3>
+        <p class="init-card-desc">Blended finance solutions for grid-scale and behind-the-meter solar to de-risk energy for industrial tenants.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Zoshani Advisory</span>
+    <p>© 2026 Zoshani Advisory LLC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
